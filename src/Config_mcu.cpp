@@ -8,11 +8,15 @@
  // ========================================================================================================
 // --- Bibliotecas Auxiliares --- //
 
+
 #include <Arduino.h>
 #include <SPI.h>
 #include <Wire.h>
-#include "wire.h"
-
+#include <DHT.h>
+#include <BLEDevice.h>
+#include <BLEServer.h>
+#include <BLEUtils.h>
+#include <BLE2902.h>
 
 
 #include "Config_mcu.h"
@@ -27,7 +31,7 @@
 #define myAdress 0x07             // ESP32
 
 
-const int LED_ESP32 = 2;
+const int LED_ESP32 = 25;
 
 #define ReleledPin 32 // numero do pino onde o Rele esta conectado
 
@@ -70,6 +74,8 @@ void Config_mcu() {
 
 
   Config_dht();
+
+  
 
   pinMode (LED_ESP32, OUTPUT);        // configura o pino do LED 2 como saida
   digitalWrite(LED_ESP32,LOW);

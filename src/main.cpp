@@ -44,6 +44,7 @@ ________________[_]_[_]_[_]_________/_]_[_\___________________________________
 
 #include "Config_mcu.h"
 #include "Config_Dht.h"
+#include "Config_bluetooth.h"
 
 
 void setup() {
